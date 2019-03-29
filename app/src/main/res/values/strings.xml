@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="something_went_wrong">Something went wrong.</string>
+    <string name="no_data_found_internet_failed">Looks like you are not connected to internet.</string>
+
+</resources>

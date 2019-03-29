@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "720699944753",
+    "firebase_url": "https://citynews-f070b.firebaseio.com",
+    "project_id": "citynews-f070b",
+    "storage_bucket": "citynews-f070b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720699944753:android:3814ce214cd583ef",
+        "android_client_info": {
+          "package_name": "com.example.karan.newsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720699944753-nl7v3oed0kks38o7ujkh4o10ubti16iv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.karan.newsapp",
+            "certificate_hash": "48f02e93559caf85f0a927e86d225cf97eb29349"
+          }
+        },
+        {
+          "client_id": "720699944753-fokf7apngaulish47kal4e4ffmh0sorq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_03JFr2wYL6oIZFAEL4uCo9-r2I5PgDU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720699944753-fokf7apngaulish47kal4e4ffmh0sorq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

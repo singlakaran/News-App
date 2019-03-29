@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="pinkish_tan">#833545</color>
+    <color name="grey">#7a7a7a</color>
+    <color name="white">#FFFFFF</color>
+    <color name="shimar_background">#dddddd</color>
+    <color name="black">#000000</color>
+    <color name="black_60_opac">#99000000</color>
+    <color name="snackbar_message">#1A1A1A</color>
+    <color name="ll_grey">#F7F4F4</color>
+</resources>
