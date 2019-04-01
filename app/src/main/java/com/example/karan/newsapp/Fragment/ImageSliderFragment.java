@@ -32,13 +32,15 @@ public class ImageSliderFragment extends Fragment {
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private List<String> images = new ArrayList<>();
+    private List<Integer> imagesNews = new ArrayList<>();
 
 
     @SuppressLint("ValidFragment")
-    public ImageSliderFragment(Context context, List<String> images) {
+    public ImageSliderFragment(Context context, List<String> images, List<Integer> imagesNews) {
         // Required empty public constructor
         this.images = images;
         this.context = context;
+        this.imagesNews = imagesNews;
     }
 
 
@@ -55,7 +57,7 @@ public class ImageSliderFragment extends Fragment {
 
     private void iniView() {
 
-        mPager.setAdapter(new SlidingImageAdapter(context, (ArrayList<String>) images));
+        mPager.setAdapter(new SlidingImageAdapter(context, (ArrayList<String>) images, imagesNews));
 
         indicator.setViewPager(mPager);
 

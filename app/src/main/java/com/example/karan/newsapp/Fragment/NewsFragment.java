@@ -174,13 +174,15 @@ public class NewsFragment extends Fragment {
 
         if(imageList.size() > 0) {
             List<String> images = new ArrayList<>();
+            List<Integer> imageNews = new ArrayList<>();
             for(int i=0;i<imageList.size();i++) {
                 images.add(imageList.get(i).getSlider_image());
+                imageNews.add(imageList.get(i).getSlider_news_id());
             }
 //            images.add("https://tineye.com/images/widgets/mona.jpg");
             if(images.size() > 0) {
                 llNewsImage.setVisibility(View.VISIBLE);
-                Utils.addFragment(getFragmentManager(), R.id.ll_news_image, new ImageSliderFragment(getContext(),images));
+                Utils.addFragment(getFragmentManager(), R.id.ll_news_image, new ImageSliderFragment(getContext(),images, imageNews));
             } else {
                 llNewsImage.setVisibility(View.GONE);
             }

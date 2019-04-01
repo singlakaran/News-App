@@ -1,6 +1,7 @@
 package com.example.karan.newsapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,20 +10,24 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import com.example.karan.newsapp.R;
+import com.example.karan.newsapp.ReadNewsActivity;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SlidingImageAdapter extends PagerAdapter {
 
     private ArrayList<String> images;
     private LayoutInflater inflater;
     private Context context;
+    private List<Integer> imagesNews = new ArrayList<>();
 
-    public SlidingImageAdapter(Context context, ArrayList<String> images) {
+    public SlidingImageAdapter(Context context, ArrayList<String> images, List<Integer> imagesNews) {
         this.context = context;
         this.images=images;
+        this.imagesNews = imagesNews;
         inflater = LayoutInflater.from(context);
     }
 
@@ -34,7 +39,7 @@ public class SlidingImageAdapter extends PagerAdapter {
 
 
     @Override
-    public Object instantiateItem(ViewGroup view, int position) {
+    public Object instantiateItem(ViewGroup view, final int position) {
         View imageLayout = inflater.inflate(R.layout.slide_image_layout, view, false);
 
         assert imageLayout != null;
@@ -53,6 +58,17 @@ public class SlidingImageAdapter extends PagerAdapter {
             @Override
             public void onError() {
                 Log.e("failure","failure");
+            }
+        });
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(imagesNews != null && imagesNews.size() > 0) {
+                    Intent intent = new Intent(context, ReadNewsActivity.class);
+                    intent.putExtra("news_id", imagesNews.get(position));
+                    context.startActivity(intent);
+                }
             }
         });
 

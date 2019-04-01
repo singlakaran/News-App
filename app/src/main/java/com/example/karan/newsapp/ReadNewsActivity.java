@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -39,7 +36,7 @@ public class ReadNewsActivity extends AppCompatActivity {
     private String heading;
     protected String subHeading;
     private int newsId;
-    private ConstraintLayout clMain;
+    private RelativeLayout clMain;
     private String  youtubeUrl;
     List<String> images = new ArrayList<>();
 
@@ -132,7 +129,7 @@ public class ReadNewsActivity extends AppCompatActivity {
 //        Picasso.with(this).load(imageUrl).fit().centerCrop().placeholder(R.drawable.ic_clear_all_black_24dp)
 //                .into(ivNewsImage);
         if(images.size() > 0) {
-            Utils.addFragment(ReadNewsActivity.this.getSupportFragmentManager(), R.id.tv_news_image, new ImageSliderFragment(this, images));
+            Utils.addFragment(ReadNewsActivity.this.getSupportFragmentManager(), R.id.tv_news_image, new ImageSliderFragment(this, images, null));
         } else {
             tvNewsImage.setVisibility(View.GONE);
         }
